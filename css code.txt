@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif; /*font family from google font*/
+    font-size: 16px;
+}
+
+ul{
+    list-style: none; /*for removing bullet*/
+}
+
+a{
+    text-decoration: none; /* for removing anker text under line*/
+}
+
+
+/* Header Start*/
+
+header .logo img{
+    width: 79px;
+}
+
+header{
+    /*background-color: rgb(170, 152, 152);*/
+    padding: 34px 78px;  /* inside the header(header size will adjust automaticly) dont provide margin for header distance*/ 
+    position: absolute; /*merge header and section one (but header will cover with section one)*/
+    z-index: 2;   /* header will arrive over the section one (z-index:2- mean second card)*/
+    width: 100%; /*after this process width will be reduse we want full width*/
+    background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0, 0, 0,0) 60%); /*header gradiant design*/
+
+}
+
+header nav{  /* dont add .nav (nav is not a class)*/
+    display: flex; /* (flex using for row arrangment)  flex always use direct parent*/
+    justify-content: space-between; /*saperate icon and nav names right and left*/
+    align-items: center; /* allign icon and nav names at same direction(centeer)*/
+
+}
+/*header*/.navbar ul{
+    display: flex; /* (flex using for row arrangment)  flex always use direct parent*/
+
+}
+
+.navbar a{  /*nav names(anker)*/
+    color: #ffff;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px 8px;/*please check whatsapp to know the diffrent (for nav name underline purpose*/
+    margin: 0px 20px; /*please check whatsapp to know the diffrent*/
+}
+
+.navbar li:last-child a{ /* we want cancel li last child extra padding*/
+    padding-right: 0;
+}
+
+.navbar li:hover a{ /*color changing when we touch*/
+    color: #f70142; 
+}
+
+.navbar li a{
+    transition: color ease 0.8s; /*hover time slow*/
+}
+
+.navbar li.active a{
+    border-bottom: 2px solid #f70142; /*for nav name bottom line*/
+}
+
+/* Section-one start */
+
+
+.section-one img{
+    width: 100%; /*background image*/
+    height: 660px;
+
+}
+
+
+.section-one .section-one-info{ /* merging parent and child(for geting text over the image)*/
+    position: absolute;
+   /* top: 0; /*main heading will be situate at top of body(1)*/
+   top: 40%; /*main heading adjust verticaly*/ 
+   /*transform: translateY(-50%); /*get correct 50%*/
+   left: 58px; /*spact between left side margin and main heading*/
+
+}
+
+.section-one{
+    position: relative; /*child want to know section-one is parent (2)-now we can see child is situate over the parent*/
+}
+
+.section-one .section-one-info h1{ /*main heading*/
+    color: #f13935;
+}
+
+
+
+/* Section-one end */
